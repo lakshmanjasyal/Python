@@ -8,15 +8,14 @@ def calculate_bonus(salary, holidays_worked, night_shifts, complaints):
     total_bonus = yearly_bonus + holiday_bonus + night_shift_bonus - complaint_penalty
     return total_bonus
 
-# Taking user input
+# Taking user input (Ensuring proper data types)
 name = input("Enter Employee Name: ")
-salary = float(input("Enter Monthly Salary (₹): "))
-holidays_worked = int(input("Enter Number of Holidays Worked: "))
-night_shifts = int(input("Enter Number of Night Shifts: "))
-complaints = int(input("Enter Number of Complaints: "))
+salary = float(input("Enter Monthly Salary (₹): "))  # Convert to float
+holidays_worked = int(input("Enter Number of Holidays Worked: "))  # Convert to int
+night_shifts = int(input("Enter Number of Night Shifts: "))  # Convert to int
+complaints = int(input("Enter Number of Complaints: "))  # Convert to int
 
 # Calculate and display bonus
-bonus = calculate_bonus(salary, holidays_worked, night_shifts, complaints)
-print(f"\nYear-end bonus for {name}: ₹{bonus:.2f}")
-
-
+total_salary = calculate_bonus(salary, holidays_worked, night_shifts, complaints)
+print(f"Bonus:",total_salary-salary)
+print(f"Total Salary after 1 year for {name}: ₹{total_salary:.2f}")
