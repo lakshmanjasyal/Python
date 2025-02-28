@@ -1,0 +1,3 @@
+git init
+Initialized empty Git repository in /Users/lakshmannarayan/Documents/Python/.git/
+https://codingnomads.com/git-init
